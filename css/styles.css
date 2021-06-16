@@ -1,0 +1,51 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --main-black: #222831;
+    --main-blue: #10375C;
+    --main-orange: #FF5722;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Header */
+
+.header {
+    padding: 40px 0;
+}
+
+.header .logo .logo__item {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--main-blue);
+}
+
+.header .nav .nav-item .nav-item__link {
+    margin-left: 40px;
+    font-size: 16px;
+    color: var(--main-black);
+}
+
+.header .auth .auth-btn__item {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: var(--main-orange);
+}
+
+.header .auth .auth-btn__item.active {
+    background-color: var(--main-orange);
+    color: #fff;
+}
