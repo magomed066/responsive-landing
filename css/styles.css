@@ -5,8 +5,10 @@
 
 :root {
     --main-black: #222831;
+    --main-text-color: #6A6A6A;
     --main-blue: #10375C;
     --main-orange: #FF5722;
+    --input-color: #0D2C4A;
 }
 
 * {
@@ -15,6 +17,7 @@
     list-style: none;
     text-decoration: none;
     outline: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -48,4 +51,183 @@ body {
 .header .auth .auth-btn__item.active {
     background-color: var(--main-orange);
     color: #fff;
+}
+
+/* Intro */
+
+.intro-title .intro-title__sub {
+    font-size: 20px;
+    color: var(--main-black);
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.intro-title .intro-title__sub::before {
+    position: absolute;
+    content: '';
+    width: 73px;
+    height: 2px;
+    background: var(--main-black);
+    left: 120px;
+    top: 14px;
+}
+
+.intro-title .intro-title__text {
+    width: 667px;
+    font-size: 52px;
+    font-family: 'Lora', 'sans-serif';
+    font-weight: bold;
+    color: var(--main-blue);
+}
+
+.intro-title .intro-title__text span {
+    color: var(--main-orange);
+}
+
+.intro .intro-desc {
+    width: 382px;
+}
+
+.intro .intro-desc .intro-desc__text {
+    font-size: 20px;
+    color: var(--main-text-color);
+    margin-top: 45px;
+}
+
+/* Place */
+
+
+.place form {
+    width: 445px;
+    padding: 40px 40px;
+    background-color: var(--main-blue);
+    color: #fff;
+
+}
+
+.place form h2 {
+    font-family: 'Lora', 'sans-serif';
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.place form h2 {
+    font-family: 'Lora', 'sans-serif';
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+.place form .select {
+    background: var(--input-color);
+    border: 0;
+    margin-bottom: 17px;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.place form .select .select-info label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #fff;
+    opacity: .35;
+}
+
+.place form .form-control {
+    position: relative;
+}
+
+.place form .form-control .options {
+    position: absolute;
+}
+
+.place form .form-control .options .option {
+    padding: 8px;
+    border-bottom: 1px solid var(--main-text-color);
+    cursor: pointer;
+}
+
+.place form .form-control .options .option:last-child {
+    padding: 8px;
+    border-bottom: 0;
+    cursor: pointer;
+}
+
+.place form .form-control .location-options,
+.date-options,
+.type-options {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: .3s all;
+}
+
+.select-arrow {
+    transition: .3s all;
+}
+
+.select-arrow.active {
+    transform: rotate(-180deg);
+}
+
+.place form .form-control .location-options.active {
+    transform: translateY(0);
+    opacity: 1;
+    width: 100%;
+    background-color: var(--input-color);
+    top: 70px;
+    font-size: 18px;
+    color: #fff;
+    z-index: 6;
+    box-shadow: 0 0 10px var(--input-color);
+}
+
+.place form .form-control .type-options.active {
+    transform: translateY(0);
+    opacity: 1;
+    width: 100%;
+    background-color: var(--input-color);
+    top: 70px;
+    font-size: 18px;
+    color: #fff;
+    z-index: 6;
+    box-shadow: 0 0 10px var(--input-color);
+}
+
+.place form .form-control .date-options.active {
+    transform: translateY(0);
+    opacity: 1;
+    width: 100%;
+    background-color: var(--input-color);
+    top: 70px;
+    font-size: 18px;
+    color: #fff;
+    z-index: 6;
+    box-shadow: 0 0 10px var(--input-color);
+}
+
+.place form .form-btn {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    background: var(--main-orange);
+}
+
+.place .container {
+    position: relative;
+}
+
+.place .form {
+    position: absolute;
+}
+
+.place .bg {
+    background-image: url('../img/main.png');
+    background-repeat: no-repeat;
+    width: 860px;
+    height: 598px;
+    margin-left: auto;
 }
